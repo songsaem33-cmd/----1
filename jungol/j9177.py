@@ -1,0 +1,5 @@
+A = input()
+B = input()
+C = input()
+print(f"{A} and {A}")
+print(f"{B} or {C}")

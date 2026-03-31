@@ -1,4 +1,8 @@
-N = int(input())
-for i in range(N):
-    int(input())
-    print(i)
+list = []
+
+for i in range(30):
+    list.append(int(input()))
+    
+print("")
+for i in list:
+    print(i, end=' ')

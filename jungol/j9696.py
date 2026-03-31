@@ -4,15 +4,18 @@ class Person:
         self.age = age
 
     def print(self):
-        print(f"{self.name}({self.age}) : child")
-        print(f"{self.name}({self.age}) : adult")
         if self.age >= 18:
-            print("child")
+            print(f"{self.name}({self.age}) : adult")
         else:
-            print("adult")
+            print(f"{self.name}({self.age}) : child")
 
 name, age = input().split()
 age = int(age)
 p1 = Person(name, age)
+
+name, age = input().split()
+age = int(age)
+p2 = Person(name, age)
+
 p1.print()
-        
+p2.print()
