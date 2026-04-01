@@ -1,19 +1,16 @@
-class soccer:
+N, M = map(int,input().split())
+team = []
+
+class Soccer:
     def __init__(self, name, win):
         self.name = name
         self.win = win
 
-    def print(self, M):
-        if M >= self.win:
-            print(f"{self.name}")
-
-team = []
-
-N = int(input())
-
 for _ in range(N):
-    name, win = map(int(input().split()))
-    team.append(team(name, win))
+    name, win = input().split()
+    win = int(win)           
+    team.append(Soccer(name, win))
 
-for s in team:
-    s.print()
+for s in reversed(team):
+    if s.win >= M:
+        print(s.name)
