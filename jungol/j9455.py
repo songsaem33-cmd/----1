@@ -4,5 +4,4 @@ def r(N):
 N = int(input())
 
 s = r(N)
-print(s)
-
+print("%.2f" % s)

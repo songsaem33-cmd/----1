@@ -1,4 +1,4 @@
-A, B = map(int,input().split())
-C, D = map(int,input().split())
+A, C = map(int,input().split())
+B, D = map(int,input().split())
 
 print(f"{A*B+C*D}")

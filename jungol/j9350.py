@@ -1,7 +1,8 @@
-A = int(input())
-B = int(input())
-C = int(input())
-D = int(input())
-E = int(input())
+lst = []
 
-print(A, B, C, D, E)
+for i in range(5):
+    x = input()
+    lst.append(x)
+
+for j in range(len(lst)):
+    print(lst[j], end=' ')
