@@ -17,17 +17,16 @@ def show_menu():
     print(menu_num)
     return menu_num
 
-# def delete_menu():
-#     print("삭제할 직원의 사번, 이름을 입력하세요....")
-#     empno, ename = input().split()
-#     print(empno, ename)
+def delete_emp():
+    print("삭제할 직원의 사번을 입력하세요:")
+    empno, ename = input().split()
 
-#     try:
-#         cursor.execute("INSERT INTO test_table (id, data) VALUES (:1, :2)", [empno, ename.upper()])
-#         conn.commit()
-#         print("Data inserted successfully")
-#     except oracledb.DatabaseError as e:
-#         print(f"Error inserting data: {e}")
+    try:
+        cursor.execute("DELETE FROM emp WHERE empno = :1", [empno])
+        conn.commit()
+        print("삭제 완료!")
+    except oracledb.DatabaseError as e:
+        print(f"삭제 중 에러 발생: {e}")
 
 def insert_emp(): # empno, ename, job, mgr, hiredate, sal, comm, deptno
     print("새로운 직원의 사번, 이름을 입력하세여....")
@@ -58,6 +57,7 @@ while loop:
         insert_emp()
     elif select == 2:
         print("2. 직원 삭제 메뉴")
+        delete_emp()
     elif select == 3:
         print("3. 직원 조회 메뉴-")
         search_emp()
